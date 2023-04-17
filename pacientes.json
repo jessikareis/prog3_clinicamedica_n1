@@ -1,0 +1,34 @@
+[ {
+  "id" : 1,
+  "nome" : "Jessika Reis",
+  "cpf" : "21542652475",
+  "telefone" : "985645785",
+  "ativo" : true,
+  "plano" : {
+    "id" : 1,
+    "nome" : "Unimed Costa do Sol",
+    "ativo" : true
+  }
+}, {
+  "id" : 2,
+  "nome" : "Alexandre Mello",
+  "cpf" : "55487569523",
+  "telefone" : "21546875",
+  "ativo" : true,
+  "plano" : {
+    "id" : 2,
+    "nome" : "Bradesco",
+    "ativo" : true
+  }
+}, {
+  "id" : 3,
+  "nome" : "Valentina Barcelos",
+  "cpf" : "21542658758",
+  "telefone" : "2125452366",
+  "ativo" : true,
+  "plano" : {
+    "id" : 6,
+    "nome" : "NotreDame Intermédica",
+    "ativo" : true
+  }
+} ]

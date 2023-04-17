@@ -1,0 +1,77 @@
+[ {
+  "id" : 1,
+  "hora" : "10:25",
+  "data" : "18/04/2023",
+  "paciente" : {
+    "id" : 1,
+    "nome" : "Jessika Reis",
+    "cpf" : "21542652475",
+    "telefone" : "985645785",
+    "ativo" : true,
+    "plano" : {
+      "id" : 1,
+      "nome" : "Unimed Costa do Sol",
+      "ativo" : true
+    }
+  },
+  "plano" : {
+    "id" : 1,
+    "nome" : "Unimed Costa do Sol",
+    "ativo" : true
+  },
+  "medico" : {
+    "id" : 2,
+    "nome" : "Maria Auxiliadora",
+    "telefoneM" : "985475632",
+    "ativo" : true,
+    "especialidade" : {
+      "id" : 5,
+      "nome" : "Dermatologista",
+      "ativo" : true
+    }
+  },
+  "especialidade" : {
+    "id" : 5,
+    "nome" : "Dermatologista",
+    "ativo" : true
+  },
+  "ativo" : true
+}, {
+  "id" : 2,
+  "hora" : "14:00",
+  "data" : "26/04/2023",
+  "paciente" : {
+    "id" : 3,
+    "nome" : "Valentina Barcelos",
+    "cpf" : "21542658758",
+    "telefone" : "2125452366",
+    "ativo" : true,
+    "plano" : {
+      "id" : 6,
+      "nome" : "NotreDame Intermédica",
+      "ativo" : true
+    }
+  },
+  "plano" : {
+    "id" : 6,
+    "nome" : "NotreDame Intermédica",
+    "ativo" : true
+  },
+  "medico" : {
+    "id" : 1,
+    "nome" : "Guilherme Reis",
+    "telefoneM" : "20122542",
+    "ativo" : true,
+    "especialidade" : {
+      "id" : 1,
+      "nome" : "Cardiologista",
+      "ativo" : true
+    }
+  },
+  "especialidade" : {
+    "id" : 1,
+    "nome" : "Cardiologista",
+    "ativo" : true
+  },
+  "ativo" : true
+} ]

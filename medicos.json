@@ -1,0 +1,31 @@
+[ {
+  "id" : 1,
+  "nome" : "Guilherme Reis",
+  "telefoneM" : "20122542",
+  "ativo" : true,
+  "especialidade" : {
+    "id" : 1,
+    "nome" : "Cardiologista",
+    "ativo" : true
+  }
+}, {
+  "id" : 3,
+  "nome" : "Marcio Graça",
+  "telefoneM" : "985472654",
+  "ativo" : true,
+  "especialidade" : {
+    "id" : 6,
+    "nome" : "Oftalmologia",
+    "ativo" : true
+  }
+}, {
+  "id" : 2,
+  "nome" : "Maria Auxiliadora",
+  "telefoneM" : "985475632",
+  "ativo" : true,
+  "especialidade" : {
+    "id" : 5,
+    "nome" : "Dermatologista",
+    "ativo" : true
+  }
+} ]

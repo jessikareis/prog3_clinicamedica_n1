@@ -21,9 +21,9 @@ public class MainController implements Initializable {
     @FXML
     private void BtnMedico_Click(ActionEvent event) {preencherLista("Medico");}
     @FXML
-    private void BtnAtendimento1_Click(ActionEvent event) {preencherLista("Atendimento1");}
+    private void BtnAtendimento1_Click(ActionEvent event) {preencherLista("AtendimentoEspecifico");}
     @FXML
-    private void BtnAtendimento2_Click(ActionEvent event) {preencherLista("Atendimento2");}
+    private void BtnAtendimento2_Click(ActionEvent event) {preencherLista("AtendTodosMedicos");}
     @FXML
     private void BtnAgenda_Click(ActionEvent event) {preencherLista("Agenda");} 
     

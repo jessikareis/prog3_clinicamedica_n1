@@ -1,0 +1,25 @@
+[ {
+  "id" : 5,
+  "nome" : "SulAmérica Saúde",
+  "ativo" : true
+}, {
+  "id" : 2,
+  "nome" : "Bradesco",
+  "ativo" : true
+}, {
+  "id" : 1,
+  "nome" : "Unimed Costa do Sol",
+  "ativo" : true
+}, {
+  "id" : 3,
+  "nome" : "OdontoPrev",
+  "ativo" : true
+}, {
+  "id" : 4,
+  "nome" : "Uniodonto",
+  "ativo" : true
+}, {
+  "id" : 6,
+  "nome" : "NotreDame Intermédica",
+  "ativo" : true
+} ]
