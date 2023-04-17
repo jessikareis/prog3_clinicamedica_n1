@@ -61,10 +61,4 @@ public class EspecialidadeDao extends Persistencia implements Dao<Especialidade>
             return new HashSet<Especialidade>();
         }
     }
-    
-    
-
-
 }
-    
-

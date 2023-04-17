@@ -62,9 +62,4 @@ public class PlanoDao extends Persistencia implements Dao<Plano> {
         }
     }
     
-    
-
-
 }
-    
-

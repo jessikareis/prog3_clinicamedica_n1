@@ -97,7 +97,6 @@ public class PacienteController implements Initializable{
         } catch (Exception e) {
             e.printStackTrace();
         }
-       
     }
     /*
      * botaoRemover.addActionListener(new ActionListener() {
@@ -154,6 +153,4 @@ public class PacienteController implements Initializable{
         carregarPlanos();
         exibirPaciente();   
     }
-
-
 }

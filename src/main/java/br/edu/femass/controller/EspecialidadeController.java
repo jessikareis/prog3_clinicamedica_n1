@@ -110,8 +110,6 @@ public class EspecialidadeController implements Initializable{
             new PropertyValueFactory<>("nome"));         
         exibirEspecialidade();
     }
-
-
 }
 
 //     @FXML 

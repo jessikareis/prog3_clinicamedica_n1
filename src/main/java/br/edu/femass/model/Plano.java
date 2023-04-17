@@ -59,8 +59,6 @@ public class Plano {
     //     this.planoDeSaude = planoDeSaude;
     // }
         
-   
-
     public static void atualizarUltimoId(Set<Plano> planos) {
         for (Plano plano: planos) {
             if (plano.getId().longValue()>ultimoCodigo) {    

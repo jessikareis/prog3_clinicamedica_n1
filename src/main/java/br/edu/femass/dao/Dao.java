@@ -15,5 +15,4 @@ public interface Dao<T> {
 
     public Set<T> buscar() throws DatabindException;
 
-
 }

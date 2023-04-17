@@ -73,5 +73,3 @@ public class MedicoDao extends Persistencia implements Dao<Medico> {
 
     // }
 }
-    
-

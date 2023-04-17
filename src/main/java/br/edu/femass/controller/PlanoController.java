@@ -110,8 +110,6 @@ public class PlanoController implements Initializable{
             new PropertyValueFactory<>("nome"));         
         exibirPlano();
     }
-
-
 }
 
 //     @FXML 

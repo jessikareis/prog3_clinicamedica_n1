@@ -149,8 +149,6 @@ public class MedicoController implements Initializable{
         carregarEspecialidades();
         exibirMedico();
     }
-
-
 }
 //     @FXML 
 //     private void listaMedico_keyPressed(KeyEvent event) {
