@@ -1,5 +1,5 @@
 package br.edu.femass.dao;
-    
+
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
@@ -28,8 +28,8 @@ public class PlanoDao extends Persistencia implements Dao<Plano> {
         Set<Plano> planos = buscar();
         for (Plano planoSelecionado : planos) {
             if (planoSelecionado.getId().equals(objeto.getId())) {
-                planoSelecionado.setAtivo(false);              
-            }  
+                planoSelecionado.setAtivo(false);
+            }
         }
 
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(arquivo, planos);
@@ -38,7 +38,8 @@ public class PlanoDao extends Persistencia implements Dao<Plano> {
 
     public Set<Plano> buscar() throws DatabindException {
         try {
-            Set<Plano> planos = objectMapper.readValue(arquivo, new TypeReference<Set<Plano>>() {});
+            Set<Plano> planos = objectMapper.readValue(arquivo, new TypeReference<Set<Plano>>() {
+            });
             Plano.atualizarUltimoId(planos);
             return planos;
         } catch (IOException ex) {
@@ -61,5 +62,5 @@ public class PlanoDao extends Persistencia implements Dao<Plano> {
             return new HashSet<Plano>();
         }
     }
-    
+
 }

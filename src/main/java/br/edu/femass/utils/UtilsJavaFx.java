@@ -8,6 +8,6 @@ public class UtilsJavaFx {
         Alert alerta = new Alert(AlertType.ERROR);
         alerta.setTitle(mensagem);
         alerta.setContentText(mensagem);
-        alerta.show();        
+        alerta.show();
     }
 }

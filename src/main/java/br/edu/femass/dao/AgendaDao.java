@@ -1,5 +1,5 @@
 package br.edu.femass.dao;
-    
+
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
@@ -27,8 +27,8 @@ public class AgendaDao extends Persistencia implements Dao<Agenda> {
         Set<Agenda> agendas = buscar();
         for (Agenda agendaSelecionado : agendas) {
             if (agendaSelecionado.getId().equals(objeto.getId())) {
-                agendaSelecionado.setAtivo(false);              
-            }  
+                agendaSelecionado.setAtivo(false);
+            }
         }
 
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(arquivo, agendas);
@@ -37,7 +37,8 @@ public class AgendaDao extends Persistencia implements Dao<Agenda> {
 
     public Set<Agenda> buscar() throws DatabindException {
         try {
-            Set<Agenda> agendas = objectMapper.readValue(arquivo, new TypeReference<Set<Agenda>>() {});
+            Set<Agenda> agendas = objectMapper.readValue(arquivo, new TypeReference<Set<Agenda>>() {
+            });
             Agenda.atualizarUltimoId(agendas);
             return agendas;
         } catch (IOException ex) {
@@ -62,16 +63,14 @@ public class AgendaDao extends Persistencia implements Dao<Agenda> {
     }
 
     // public List<Cliente> buscarAtivos() throws DatabindException {
-    //     Set<Cliente> clientes = buscar();
+    // Set<Cliente> clientes = buscar();
 
-    //     List<Cliente> clientesAtivos = clientes
-    //             .stream()
-    //             .filter(cliente -> cliente.getAtivo().equals(true))
-    //             .collect(Collectors.toList());
+    // List<Cliente> clientesAtivos = clientes
+    // .stream()
+    // .filter(cliente -> cliente.getAtivo().equals(true))
+    // .collect(Collectors.toList());
 
-    //     return clientesAtivos;
+    // return clientesAtivos;
 
     // }
 }
-    
-

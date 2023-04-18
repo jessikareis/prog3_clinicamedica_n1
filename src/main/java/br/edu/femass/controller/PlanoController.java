@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import com.fasterxml.jackson.core.exc.StreamWriteException;
 
 import br.edu.femass.dao.PlanoDao;
-import br.edu.femass.model.Plano;   
+import br.edu.femass.model.Plano;
 import br.edu.femass.utils.UtilsJavaFx;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,18 +22,18 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
-public class PlanoController implements Initializable{
+public class PlanoController implements Initializable {
     @FXML
     private TextField TxtIdPlano;
     @FXML
-    private TextField TxtNomePlano;     
+    private TextField TxtNomePlano;
     @FXML
     private TableView<Plano> TablePlano = new TableView<Plano>();
     @FXML
     private TableColumn<Plano, Long> colIdPlano = new TableColumn<>();
     @FXML
     private TableColumn<Plano, String> colNomePlano = new TableColumn<>();
-   
+
     private PlanoDao dao_plano = new PlanoDao();
     private Plano plano;
 
@@ -44,26 +44,27 @@ public class PlanoController implements Initializable{
                     TxtNomePlano.getText());
 
             TxtIdPlano.setText(plano.getId().toString());
-            if (dao_plano.gravar(plano)==false) {
+            if (dao_plano.gravar(plano) == false) {
                 UtilsJavaFx.exibirMensagem("Não foi possível gravar o plano");
                 return;
-            }            
-            TxtIdPlano.setText("");                    
+            }
+            TxtIdPlano.setText("");
             TxtNomePlano.setText("");
 
-            exibirPlano();   
-              
+            exibirPlano();
+
         } catch (Exception e) {
             UtilsJavaFx.exibirMensagem(e.getMessage());
         }
     }
 
     @FXML
-    private void BtnExcluir_Click(ActionEvent event){
+    private void BtnExcluir_Click(ActionEvent event) {
         Plano plano = TablePlano.getSelectionModel().getSelectedItem();
-        if (plano==null) return;
+        if (plano == null)
+            return;
         try {
-            if (dao_plano.excluir(plano)==false) {
+            if (dao_plano.excluir(plano) == false) {
                 UtilsJavaFx.exibirMensagem("Não foi possível excluir o cliente selecionado");
             }
             exibirPlano();
@@ -74,18 +75,19 @@ public class PlanoController implements Initializable{
     }
     /*
      * botaoRemover.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    Autor autor = (Autor) listaAutores.getSelectedValue();
-                    new AutorDao().remover(autor);
-                    atualizarLista();
-
-                } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(null, ex.getMessage());
-                }
-            }
-        });
+     * 
+     * @Override
+     * public void actionPerformed(ActionEvent e) {
+     * try {
+     * Autor autor = (Autor) listaAutores.getSelectedValue();
+     * new AutorDao().remover(autor);
+     * atualizarLista();
+     * 
+     * } catch (Exception ex) {
+     * JOptionPane.showMessageDialog(null, ex.getMessage());
+     * }
+     * }
+     * });
      * 
      * 
      * 
@@ -93,74 +95,73 @@ public class PlanoController implements Initializable{
 
     private void exibirPlano() {
         try {
-             ObservableList<Plano> data = FXCollections.observableArrayList(
-                dao_plano.buscarAtivos()
-             );
-             TablePlano.setItems(data);             
-             } catch (Exception ex) {
-                 ex.printStackTrace();
-             }
+            ObservableList<Plano> data = FXCollections.observableArrayList(
+                    dao_plano.buscarAtivos());
+            TablePlano.setItems(data);
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
+    }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         colIdPlano.setCellValueFactory(
-            new PropertyValueFactory<>("id"));
+                new PropertyValueFactory<>("id"));
         colNomePlano.setCellValueFactory(
-            new PropertyValueFactory<>("nome"));         
+                new PropertyValueFactory<>("nome"));
         exibirPlano();
     }
 }
 
-//     @FXML 
-//     private void listaPlano_keyPressed(KeyEvent event) {
-//         exibirDados();
-//     }
+// @FXML
+// private void listaPlano_keyPressed(KeyEvent event) {
+// exibirDados();
+// }
 
-//     @FXML 
-//     private void listaP aciente_mouseClicked(MouseEvent event) {
-//         exibirDados();
-//     }
+// @FXML
+// private void listaP aciente_mouseClicked(MouseEvent event) {
+// exibirDados();
+// }
 
-//     private void exibirDados() {
-//         Plano plano = listaPlano.getSelectionModel().getSelectedItem();
-//         if (plano==null) return;
+// private void exibirDados() {
+// Plano plano = listaPlano.getSelectionModel().getSelectedItem();
+// if (plano==null) return;
 
-//         TxtCPFP.setText(plano.getCPF());
-//         TxtPlanoP.setText(plano.getPlanoDeSaude());
-//         TxtEnderecoP.setText(plano.getEndereco());
-//         TxtId.setText(plano.getId().toString());
-//         TxtNomeP.setText(plano.getNome());
-//         TxtTelefoneP.setText(plano.getTelefones().get(0));
-//     }
+// TxtCPFP.setText(plano.getCPF());
+// TxtPlanoP.setText(plano.getPlanoDeSaude());
+// TxtEnderecoP.setText(plano.getEndereco());
+// TxtId.setText(plano.getId().toString());
+// TxtNomeP.setText(plano.getNome());
+// TxtTelefoneP.setText(plano.getTelefones().get(0));
+// }
 
-//     @FXML
-//     private void BtnExcluir_Click(ActionEvent event) {
-    //         Plano plano = listaPlano.getSelectionModel().getSelectedItem();
-    //         if (plano==null) return;
+// @FXML
+// private void BtnExcluir_Click(ActionEvent event) {
+// Plano plano = listaPlano.getSelectionModel().getSelectedItem();
+// if (plano==null) return;
 
-    //         try {
-    //             if (planoDao.excluir(plano)==false) {
-    //                 UtilsJavaFx.exibirMensagem("Não foi possível excluir o plano selecionado");
-    //             }
-    //         exibirPlano();
-    //         } catch (Exception e) {
-    //             e.printStackTrace();
-    //         }
+// try {
+// if (planoDao.excluir(plano)==false) {
+// UtilsJavaFx.exibirMensagem("Não foi possível excluir o plano selecionado");
+// }
+// exibirPlano();
+// } catch (Exception e) {
+// e.printStackTrace();
+// }
 
-//     }
+// }
 
-//      
+//
 
-//     public void exibirPlano() {
-    //         try {
-    //         ObservableList<Plano> data = FXCollections.observableArrayList(
-    //             planoDao.buscarAtivos()
-    //         );
-    //         listaPlano.setItems(data);
-    //         } catch (Exception ex) {
-    //             ex.printStackTrace();
-    //         }
-        
-//     }   
+// public void exibirPlano() {
+// try {
+// ObservableList<Plano> data = FXCollections.observableArrayList(
+// planoDao.buscarAtivos()
+// );
+// listaPlano.setItems(data);
+// } catch (Exception ex) {
+// ex.printStackTrace();
+// }
+
+// }
 // }

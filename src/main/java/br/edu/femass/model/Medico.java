@@ -5,23 +5,23 @@ import java.util.Set;
 
 public class Medico {
     private Long id;
-    private String nome;    
+    private String nome;
     private String telefoneM;
     private Boolean ativo;
     private Especialidade especialidade;
 
     private static Long ultimoCodigo = 0L;
 
-    public Medico(){
+    public Medico() {
 
     }
-    
+
     public Medico(String nome, String telefoneM, Especialidade especialidade) {
         this.nome = nome;
         this.especialidade = especialidade;
         this.telefoneM = telefoneM;
         this.ativo = true;
-        this.id = ultimoCodigo+1;
+        this.id = ultimoCodigo + 1;
         ultimoCodigo++;
     }
 
@@ -40,7 +40,7 @@ public class Medico {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
+
     public String getTelefoneM() {
         return telefoneM;
     }
@@ -53,29 +53,29 @@ public class Medico {
         return ativo;
     }
 
-    public void setAtivo(Boolean ativo){
+    public void setAtivo(Boolean ativo) {
         this.ativo = ativo;
     }
-    
+
     @Override
-    public String toString(){
+    public String toString() {
         return this.nome;
     }
 
-        public Especialidade getEspecialidade() {
-            return especialidade;
-        }
+    public Especialidade getEspecialidade() {
+        return especialidade;
+    }
 
-        public void setEspecialidade(Especialidade especialidade) {
-            this.especialidade = especialidade;
-        }
+    public void setEspecialidade(Especialidade especialidade) {
+        this.especialidade = especialidade;
+    }
 
     public static void atualizarUltimoId(Set<Medico> medicos) {
-        for (Medico medico: medicos) {
-            if (medico.getId().longValue()>ultimoCodigo) {    
-                ultimoCodigo = medico.getId();                
+        for (Medico medico : medicos) {
+            if (medico.getId().longValue() > ultimoCodigo) {
+                ultimoCodigo = medico.getId();
             }
         }
     }
-    
+
 }

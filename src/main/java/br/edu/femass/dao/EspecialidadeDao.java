@@ -1,5 +1,5 @@
 package br.edu.femass.dao;
-    
+
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
@@ -28,8 +28,8 @@ public class EspecialidadeDao extends Persistencia implements Dao<Especialidade>
         Set<Especialidade> especialidades = buscar();
         for (Especialidade especialidadeSelecionado : especialidades) {
             if (especialidadeSelecionado.getId().equals(objeto.getId())) {
-                especialidadeSelecionado.setAtivo(false);              
-            }  
+                especialidadeSelecionado.setAtivo(false);
+            }
         }
 
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(arquivo, especialidades);
@@ -38,7 +38,9 @@ public class EspecialidadeDao extends Persistencia implements Dao<Especialidade>
 
     public Set<Especialidade> buscar() throws DatabindException {
         try {
-            Set<Especialidade> especialidades = objectMapper.readValue(arquivo, new TypeReference<Set<Especialidade>>() {});
+            Set<Especialidade> especialidades = objectMapper.readValue(arquivo,
+                    new TypeReference<Set<Especialidade>>() {
+                    });
             Especialidade.atualizarUltimoId(especialidades);
             return especialidades;
         } catch (IOException ex) {

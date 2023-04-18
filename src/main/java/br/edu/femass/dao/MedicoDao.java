@@ -1,5 +1,5 @@
 package br.edu.femass.dao;
-    
+
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
@@ -27,8 +27,8 @@ public class MedicoDao extends Persistencia implements Dao<Medico> {
         Set<Medico> medicos = buscar();
         for (Medico medicoSelecionado : medicos) {
             if (medicoSelecionado.getId().equals(objeto.getId())) {
-                medicoSelecionado.setAtivo(false);              
-            }  
+                medicoSelecionado.setAtivo(false);
+            }
         }
 
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(arquivo, medicos);
@@ -37,7 +37,8 @@ public class MedicoDao extends Persistencia implements Dao<Medico> {
 
     public Set<Medico> buscar() throws DatabindException {
         try {
-            Set<Medico> medicos = objectMapper.readValue(arquivo, new TypeReference<Set<Medico>>() {});
+            Set<Medico> medicos = objectMapper.readValue(arquivo, new TypeReference<Set<Medico>>() {
+            });
             Medico.atualizarUltimoId(medicos);
             return medicos;
         } catch (IOException ex) {
@@ -62,14 +63,14 @@ public class MedicoDao extends Persistencia implements Dao<Medico> {
     }
 
     // public List<Cliente> buscarAtivos() throws DatabindException {
-    //     Set<Cliente> clientes = buscar();
+    // Set<Cliente> clientes = buscar();
 
-    //     List<Cliente> clientesAtivos = clientes
-    //             .stream()
-    //             .filter(cliente -> cliente.getAtivo().equals(true))
-    //             .collect(Collectors.toList());
+    // List<Cliente> clientesAtivos = clientes
+    // .stream()
+    // .filter(cliente -> cliente.getAtivo().equals(true))
+    // .collect(Collectors.toList());
 
-    //     return clientesAtivos;
+    // return clientesAtivos;
 
     // }
 }

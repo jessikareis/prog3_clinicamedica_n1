@@ -5,12 +5,10 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
 import org.junit.jupiter.api.Test;
-
 
 public class AgendaTest {
 
@@ -22,7 +20,7 @@ public class AgendaTest {
         Plano plano = new Plano();
         Medico medico = new Medico("Dr. José", "215425896", new Especialidade("Cardiologista"));
         Especialidade especialidade = new Especialidade("Cardiologista");
-        agenda = new Agenda("10:00", "20-04-2023", paciente, plano, medico, especialidade);
+        agenda = new Agenda("10:00", "20-06-2023", paciente, plano, medico, especialidade);
     }
 
     @Test
@@ -43,13 +41,13 @@ public class AgendaTest {
 
     @Test
     public void testGetData() {
-        assertEquals("20-04-2023", agenda.getData());
+        assertEquals("20-06-2023", agenda.getData());
     }
 
     @Test
     public void testSetData() {
         agenda.setData("20-04-2023");
-        assertEquals("20-04-2023", agenda.getData());
+        assertEquals("20-06-2023", agenda.getData());
     }
 
     @Test
@@ -114,10 +112,10 @@ public class AgendaTest {
     @Test
     public void testAtualizarUltimoId() {
         Set<Agenda> agendas = new HashSet<>();
-        agendas.add(new Agenda("09:00", "2022-04-06", 
-        new Paciente("Maria", "09871547321", null, null), 
-        new Plano("Plano de Saúde B"), new Medico("Dr. Ana", null, null), 
-        new Especialidade("Pediatria")));
-    
-}
+        agendas.add(new Agenda("09:00", "2022-06-06",
+                new Paciente("Maria", "09871547321", null, null),
+                new Plano("Plano de Saúde B"), new Medico("Dr. Ana", null, null),
+                new Especialidade("Pediatria")));
+
+    }
 }
