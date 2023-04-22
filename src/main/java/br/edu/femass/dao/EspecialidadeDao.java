@@ -2,7 +2,6 @@ package br.edu.femass.dao;
 
 import java.io.IOException;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import com.fasterxml.jackson.core.exc.StreamWriteException;

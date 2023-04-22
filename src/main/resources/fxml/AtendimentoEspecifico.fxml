@@ -10,25 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<BorderPane prefHeight="361.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.femass.controller.AtendimentoEspecificoController">
-   <right>
-      <Pane prefHeight="361.0" prefWidth="583.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button layoutX="214.0" layoutY="264.0" mnemonicParsing="false" onAction="#BtnExcluir_Click" prefHeight="49.0" prefWidth="127.0" text="Excluir" />
-            <TableView fx:id="TableAtendimento" layoutY="14.0" prefHeight="200.0" prefWidth="581.0">
-              <columns>
-                  <TableColumn fx:id="IdAtendimentoE" prefWidth="37.0" text="ID" />
-                <TableColumn fx:id="colDataAtendimentoE" prefWidth="72.0" text="Data" />
-                  <TableColumn fx:id="colHoraAtendimentoE" prefWidth="64.0" text="Hora" />
-                  <TableColumn fx:id="colPacienteAtendimentoE" minWidth="0.0" prefWidth="116.0" text="Paciente" />
-                  <TableColumn fx:id="colPlanoAtendimentoE" minWidth="0.0" text="Plano" />
-                  <TableColumn fx:id="colMedicoAtendimentoE" minWidth="0.0" prefWidth="97.0" text="Medico" />
-                  <TableColumn fx:id="colEspecialidadeAtendimentoE" minWidth="0.0" prefWidth="150.0" text="Especialidade" />
-              </columns>
-            </TableView>
-         </children>
-      </Pane>
-   </right>
+<BorderPane prefHeight="361.0" prefWidth="1032.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.femass.controller.AtendimentoEspecificoController">
    <left>
       <GridPane maxHeight="371.0" prefHeight="363.0" prefWidth="282.0">
         <columnConstraints>
@@ -52,10 +34,28 @@
             <Button mnemonicParsing="false" onAction="#BtnExibir_Click" prefHeight="39.0" prefWidth="106.0" text="Exibir Agenda" GridPane.columnIndex="2" GridPane.rowIndex="4" />
             <DatePicker fx:id="DtData" prefHeight="25.0" prefWidth="181.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <Label prefHeight="42.0" prefWidth="78.0" text="Medico" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ComboBox fx:id="comboMedico" prefHeight="25.0" prefWidth="169.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <ComboBox fx:id="comboMedico" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <Label prefHeight="17.0" prefWidth="48.0" text="ID" GridPane.columnIndex="1" />
             <TextField fx:id="TxtId" disable="true" GridPane.columnIndex="2" />
          </children>
       </GridPane>
    </left>
+   <center>
+      <Pane prefHeight="361.0" prefWidth="766.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="312.0" layoutY="265.0" mnemonicParsing="false" onAction="#BtnExcluir_Click" prefHeight="49.0" prefWidth="127.0" text="Excluir" />
+            <TableView fx:id="TableAtendimento" layoutX="3.0" layoutY="14.0" prefHeight="200.0" prefWidth="744.0">
+              <columns>
+                  <TableColumn fx:id="IdAtendimentoE" prefWidth="37.0" text="ID" />
+                <TableColumn fx:id="colDataAtendimentoE" prefWidth="72.0" text="Data" />
+                  <TableColumn fx:id="colHoraAtendimentoE" prefWidth="64.0" text="Hora" />
+                  <TableColumn fx:id="colPacienteAtendimentoE" minWidth="0.0" prefWidth="145.0" text="Paciente" />
+                  <TableColumn fx:id="colPlanoAtendimentoE" minWidth="0.0" prefWidth="141.0" text="Plano" />
+                  <TableColumn fx:id="colMedicoAtendimentoE" minWidth="0.0" prefWidth="148.0" text="Medico" />
+                  <TableColumn fx:id="colEspecialidadeAtendimentoE" minWidth="0.0" prefWidth="136.0" text="Especialidade" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </center>
 </BorderPane>

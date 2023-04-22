@@ -1,0 +1,64 @@
+-------------------------------------------------------------------------------
+Test set: br.edu.femass.model.AgendaTest
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 15, Errors: 0, Skipped: 0, Time elapsed: 0.006 s <<< FAILURE! - in br.edu.femass.model.AgendaTest
+br.edu.femass.model.AgendaTest.testSetEspecialidade()  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Agenda.setEspecialidade(br.edu.femass.model.Especialidade)" because "this.agenda" is null
+	at br.edu.femass.model.AgendaTest.testSetEspecialidade(AgendaTest.java:97)
+
+br.edu.femass.model.AgendaTest.testGetEspecialidade()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Agenda.getEspecialidade()" because "this.agenda" is null
+	at br.edu.femass.model.AgendaTest.testGetEspecialidade(AgendaTest.java:91)
+
+br.edu.femass.model.AgendaTest.testGetId()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Agenda.getId()" because "this.agenda" is null
+	at br.edu.femass.model.AgendaTest.testGetId(AgendaTest.java:28)
+
+br.edu.femass.model.AgendaTest.testGetHora()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Agenda.getHora()" because "this.agenda" is null
+	at br.edu.femass.model.AgendaTest.testGetHora(AgendaTest.java:33)
+
+br.edu.femass.model.AgendaTest.testSetHora()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Agenda.setHora(String)" because "this.agenda" is null
+	at br.edu.femass.model.AgendaTest.testSetHora(AgendaTest.java:38)
+
+br.edu.femass.model.AgendaTest.testSetData()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Agenda.setData(String)" because "this.agenda" is null
+	at br.edu.femass.model.AgendaTest.testSetData(AgendaTest.java:49)
+
+br.edu.femass.model.AgendaTest.testGetPaciente()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Agenda.getPaciente()" because "this.agenda" is null
+	at br.edu.femass.model.AgendaTest.testGetPaciente(AgendaTest.java:55)
+
+br.edu.femass.model.AgendaTest.testGetData()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Agenda.getData()" because "this.agenda" is null
+	at br.edu.femass.model.AgendaTest.testGetData(AgendaTest.java:44)
+
+br.edu.femass.model.AgendaTest.testGetAtivo()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Agenda.getAtivo()" because "this.agenda" is null
+	at br.edu.femass.model.AgendaTest.testGetAtivo(AgendaTest.java:103)
+
+br.edu.femass.model.AgendaTest.testSetPaciente()  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Agenda.setPaciente(br.edu.femass.model.Paciente)" because "this.agenda" is null
+	at br.edu.femass.model.AgendaTest.testSetPaciente(AgendaTest.java:61)
+
+br.edu.femass.model.AgendaTest.testGetMedico()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Agenda.getMedico()" because "this.agenda" is null
+	at br.edu.femass.model.AgendaTest.testGetMedico(AgendaTest.java:79)
+
+br.edu.femass.model.AgendaTest.testSetMedico()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Agenda.setMedico(br.edu.femass.model.Medico)" because "this.agenda" is null
+	at br.edu.femass.model.AgendaTest.testSetMedico(AgendaTest.java:85)
+
+br.edu.femass.model.AgendaTest.testSetPlano()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Agenda.setPlano(br.edu.femass.model.Plano)" because "this.agenda" is null
+	at br.edu.femass.model.AgendaTest.testSetPlano(AgendaTest.java:73)
+
+br.edu.femass.model.AgendaTest.testGetPlano()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Agenda.getPlano()" because "this.agenda" is null
+	at br.edu.femass.model.AgendaTest.testGetPlano(AgendaTest.java:67)
+
+br.edu.femass.model.AgendaTest.testSetAtivo()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Agenda.setAtivo(java.lang.Boolean)" because "this.agenda" is null
+	at br.edu.femass.model.AgendaTest.testSetAtivo(AgendaTest.java:108)
+

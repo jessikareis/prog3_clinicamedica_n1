@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------
+Test set: br.edu.femass.model.PlanoTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! - in br.edu.femass.model.PlanoTest
+br.edu.femass.model.PlanoTest.testAtualizarUltimoId()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "java.util.Set.iterator()" because "planos" is null
+	at br.edu.femass.model.Plano.atualizarUltimoId(Plano.java:63)
+	at br.edu.femass.model.PlanoTest.testAtualizarUltimoId(PlanoTest.java:52)
+
+br.edu.femass.model.PlanoTest.testGetId()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "java.util.Set.stream()" because "this.planos" is null
+	at br.edu.femass.model.PlanoTest.testGetId(PlanoTest.java:29)
+
+br.edu.femass.model.PlanoTest.testSetAtivo()  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "java.util.Set.stream()" because "this.planos" is null
+	at br.edu.femass.model.PlanoTest.testSetAtivo(PlanoTest.java:45)
+
+br.edu.femass.model.PlanoTest.testSetNome()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "java.util.Set.stream()" because "this.planos" is null
+	at br.edu.femass.model.PlanoTest.testSetNome(PlanoTest.java:38)
+

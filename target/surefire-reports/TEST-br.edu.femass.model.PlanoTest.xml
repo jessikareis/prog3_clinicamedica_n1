@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="br.edu.femass.model.PlanoTest" time="0.002" tests="4" errors="0" skipped="0" failures="4">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="c:\Users\jessi\Desktop\Prog 3\prog3_clinicamedica_n1\target\test-classes;c:\Users\jessi\Desktop\Prog 3\prog3_clinicamedica_n1\target\classes;C:\Users\jessi\.m2\repository\org\openjfx\javafx-controls\17\javafx-controls-17.jar;C:\Users\jessi\.m2\repository\org\openjfx\javafx-controls\17\javafx-controls-17-win.jar;C:\Users\jessi\.m2\repository\org\openjfx\javafx-graphics\17\javafx-graphics-17.jar;C:\Users\jessi\.m2\repository\org\openjfx\javafx-graphics\17\javafx-graphics-17-win.jar;C:\Users\jessi\.m2\repository\org\openjfx\javafx-base\17\javafx-base-17.jar;C:\Users\jessi\.m2\repository\org\openjfx\javafx-base\17\javafx-base-17-win.jar;C:\Users\jessi\.m2\repository\org\openjfx\javafx-fxml\17\javafx-fxml-17.jar;C:\Users\jessi\.m2\repository\org\openjfx\javafx-fxml\17\javafx-fxml-17-win.jar;C:\Users\jessi\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\jessi\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\jessi\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\jessi\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\jessi\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.14.2\jackson-core-2.14.2.jar;C:\Users\jessi\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.14.2\jackson-databind-2.14.2.jar;C:\Users\jessi\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.14.2\jackson-annotations-2.14.2.jar;C:\Program Files\Java\jdk-17/lib/jfxrt.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\jessi\AppData\Local\Temp\surefire5084597452179942452\surefirebooter15316155306523370952.jar C:\Users\jessi\AppData\Local\Temp\surefire5084597452179942452 2023-04-18T18-25-31_686-jvmRun1 surefire2817169777428122657tmp surefire_08573172207611074670tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="c:\Users\jessi\Desktop\Prog 3\prog3_clinicamedica_n1\target\test-classes;c:\Users\jessi\Desktop\Prog 3\prog3_clinicamedica_n1\target\classes;C:\Users\jessi\.m2\repository\org\openjfx\javafx-controls\17\javafx-controls-17.jar;C:\Users\jessi\.m2\repository\org\openjfx\javafx-controls\17\javafx-controls-17-win.jar;C:\Users\jessi\.m2\repository\org\openjfx\javafx-graphics\17\javafx-graphics-17.jar;C:\Users\jessi\.m2\repository\org\openjfx\javafx-graphics\17\javafx-graphics-17-win.jar;C:\Users\jessi\.m2\repository\org\openjfx\javafx-base\17\javafx-base-17.jar;C:\Users\jessi\.m2\repository\org\openjfx\javafx-base\17\javafx-base-17-win.jar;C:\Users\jessi\.m2\repository\org\openjfx\javafx-fxml\17\javafx-fxml-17.jar;C:\Users\jessi\.m2\repository\org\openjfx\javafx-fxml\17\javafx-fxml-17-win.jar;C:\Users\jessi\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\jessi\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\jessi\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\jessi\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\jessi\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.14.2\jackson-core-2.14.2.jar;C:\Users\jessi\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.14.2\jackson-databind-2.14.2.jar;C:\Users\jessi\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.14.2\jackson-annotations-2.14.2.jar;C:\Program Files\Java\jdk-17/lib/jfxrt.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\jessi"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="c:\Users\jessi\Desktop\Prog 3\prog3_clinicamedica_n1"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\jessi\AppData\Local\Temp\surefire5084597452179942452\surefirebooter15316155306523370952.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.6+9-LTS-190"/>
+    <property name="user.name" value="jessi"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\jessi\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\jessi\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.6"/>
+    <property name="user.dir" value="c:\Users\jessi\Desktop\Prog 3\prog3_clinicamedica_n1"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\oraclexe\app\oracle\product\10.2.0\server\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\apache-maven-3.9.1\bin;C:\Users\jessi\AppData\Local\Microsoft\WindowsApps;C:\Users\jessi\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\PostgreSQL\15\bin;C:\apache-maven-3.9.1\bin;C:\Program Files\Java\jdk-17;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.6+9-LTS-190"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="br.edu.femass.model.PlanoTest.testAtualizarUltimoId" classname="br.edu.femass.model.PlanoTest" time="0">
+    <failure message="Cannot invoke &quot;java.util.Set.iterator()&quot; because &quot;planos&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Set.iterator()" because "planos" is null
+	at br.edu.femass.model.Plano.atualizarUltimoId(Plano.java:63)
+	at br.edu.femass.model.PlanoTest.testAtualizarUltimoId(PlanoTest.java:52)
+</failure>
+  </testcase>
+  <testcase name="br.edu.femass.model.PlanoTest.testGetId" classname="br.edu.femass.model.PlanoTest" time="0">
+    <failure message="Cannot invoke &quot;java.util.Set.stream()&quot; because &quot;this.planos&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Set.stream()" because "this.planos" is null
+	at br.edu.femass.model.PlanoTest.testGetId(PlanoTest.java:29)
+</failure>
+  </testcase>
+  <testcase name="br.edu.femass.model.PlanoTest.testSetAtivo" classname="br.edu.femass.model.PlanoTest" time="0.002">
+    <failure message="Cannot invoke &quot;java.util.Set.stream()&quot; because &quot;this.planos&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Set.stream()" because "this.planos" is null
+	at br.edu.femass.model.PlanoTest.testSetAtivo(PlanoTest.java:45)
+</failure>
+  </testcase>
+  <testcase name="br.edu.femass.model.PlanoTest.testSetNome" classname="br.edu.femass.model.PlanoTest" time="0">
+    <failure message="Cannot invoke &quot;java.util.Set.stream()&quot; because &quot;this.planos&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Set.stream()" because "this.planos" is null
+	at br.edu.femass.model.PlanoTest.testSetNome(PlanoTest.java:38)
+</failure>
+  </testcase>
+</testsuite>

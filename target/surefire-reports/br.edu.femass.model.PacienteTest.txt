@@ -1,0 +1,42 @@
+-------------------------------------------------------------------------------
+Test set: br.edu.femass.model.PacienteTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in br.edu.femass.model.PacienteTest
+br.edu.femass.model.PacienteTest.testAtualizarUltimoId()  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <3> but was: <4>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:166)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:161)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:629)
+	at br.edu.femass.model.PacienteTest.testAtualizarUltimoId(PacienteTest.java:55)
+
+br.edu.femass.model.PacienteTest.testToString()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Paciente.toString()" because "this.paciente" is null
+	at br.edu.femass.model.PacienteTest.testToString(PacienteTest.java:39)
+
+br.edu.femass.model.PacienteTest.testSetPlano()  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Paciente.setPlano(br.edu.femass.model.Plano)" because "this.paciente" is null
+	at br.edu.femass.model.PacienteTest.testSetPlano(PacienteTest.java:33)
+
+br.edu.femass.model.PacienteTest.testSetAtivo()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Paciente.setAtivo(java.lang.Boolean)" because "this.paciente" is null
+	at br.edu.femass.model.PacienteTest.testSetAtivo(PacienteTest.java:44)
+
+br.edu.femass.model.PacienteTest.testSetNome()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Paciente.setNome(String)" because "this.paciente" is null
+	at br.edu.femass.model.PacienteTest.testSetNome(PacienteTest.java:15)
+
+br.edu.femass.model.PacienteTest.testSetTelefone()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Paciente.setTelefone(String)" because "this.paciente" is null
+	at br.edu.femass.model.PacienteTest.testSetTelefone(PacienteTest.java:27)
+
+br.edu.femass.model.PacienteTest.testSetId()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Paciente.setId(java.lang.Long)" because "this.paciente" is null
+	at br.edu.femass.model.PacienteTest.testSetId(PacienteTest.java:60)
+
+br.edu.femass.model.PacienteTest.testSetCpf()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "br.edu.femass.model.Paciente.setCpf(String)" because "this.paciente" is null
+	at br.edu.femass.model.PacienteTest.testSetCpf(PacienteTest.java:21)
+

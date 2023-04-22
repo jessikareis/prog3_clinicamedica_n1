@@ -1,15 +1,10 @@
 package br.edu.femass.controller;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Set;
-
-import javax.swing.JOptionPane;
-
-import com.fasterxml.jackson.core.exc.StreamWriteException;
 
 import br.edu.femass.dao.EspecialidadeDao;
 import br.edu.femass.dao.MedicoDao;
@@ -22,13 +17,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 
 public class MedicoController implements Initializable {
     @FXML

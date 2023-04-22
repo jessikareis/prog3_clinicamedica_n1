@@ -1,10 +1,7 @@
 package br.edu.femass.controller;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javax.swing.JOptionPane;
-import com.fasterxml.jackson.core.exc.StreamWriteException;
 
 import br.edu.femass.dao.PlanoDao;
 import br.edu.femass.model.Plano;
@@ -14,13 +11,10 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 
 public class PlanoController implements Initializable {
     @FXML
