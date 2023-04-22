@@ -4,11 +4,14 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.management.Query;
+
 import com.fasterxml.jackson.core.exc.StreamWriteException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DatabindException;
 
 import br.edu.femass.model.Especialidade;
+import br.edu.femass.model.Medico;
 
 public class EspecialidadeDao extends Persistencia implements Dao<Especialidade> {
 

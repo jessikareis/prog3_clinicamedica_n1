@@ -93,25 +93,6 @@ public class PacienteController implements Initializable {
             e.printStackTrace();
         }
     }
-    /*
-     * botaoRemover.addActionListener(new ActionListener() {
-     * 
-     * @Override
-     * public void actionPerformed(ActionEvent e) {
-     * try {
-     * Autor autor = (Autor) listaAutores.getSelectedValue();
-     * new AutorDao().remover(autor);
-     * atualizarLista();
-     * 
-     * } catch (Exception ex) {
-     * JOptionPane.showMessageDialog(null, ex.getMessage());
-     * }
-     * }
-     * });
-     * 
-     * 
-     * 
-     */
 
     private void exibirPaciente() {
         try {

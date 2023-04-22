@@ -73,25 +73,18 @@ public class AgendaController implements Initializable {
     private Paciente paciente;
     private PlanoDao dao_plano = new PlanoDao();
     private Plano plano;
+    private Especialidade especialidadeSelecionada;
 
     @FXML
     private void BtnGravar_Click(ActionEvent event) {
         try {
-            // Paciente p = new Plano();
-            // p = comboPaciente.getValue();
-            // Plano pl = new Plano();
-            // pl = comboPlano.getValue();
-            // Medico m = new Medico();
-            // m = comboMedico.getItems()
             agenda = new Agenda(
                     TxtHora.getText(),
                     DtData.getValue().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")),
                     comboPaciente.getValue(),
                     comboPlano.getValue(),
                     comboMedico.getValue(),
-                    comboEspecialidade.getValue()
-
-            );
+                    especialidadeSelecionada);
             TxtId.setText(agenda.getId().toString());
             if (dao_agenda.gravar(agenda) == false) {
                 UtilsJavaFx.exibirMensagem("Não foi possível gravar o agenda");
@@ -121,25 +114,21 @@ public class AgendaController implements Initializable {
         }
 
     }
-    /*
-     * botaoRemover.addActionListener(new ActionListener() {
-     * 
-     * @Override
-     * public void actionPerformed(ActionEvent e) {
-     * try {
-     * Autor autor = (Autor) listaAutores.getSelectedValue();
-     * new AutorDao().remover(autor);
-     * atualizarLista();
-     * 
-     * } catch (Exception ex) {
-     * JOptionPane.showMessageDialog(null, ex.getMessage());
-     * }
-     * }
-     * });
-     * 
-     * 
-     * 
-     */
+
+    @FXML
+    private void comboMedico_OnAction(ActionEvent event) {
+        Medico medico = comboMedico.getValue();
+        if (medico == null)
+            return;
+        try {
+            Set<Especialidade> especialidadesSet = dao_especialidade.buscarAtivos();
+            List<Especialidade> especialidades = new ArrayList<>(especialidadesSet);
+            ObservableList<Especialidade> data = FXCollections.observableArrayList(especialidades);
+            comboEspecialidade.setItems(data);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
 
     private void exibirAgenda() {
         try {
@@ -162,7 +151,6 @@ public class AgendaController implements Initializable {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
         // Medicos
         try {
             Set<Medico> medicosSet = dao_medico.buscarAtivos();
@@ -179,6 +167,9 @@ public class AgendaController implements Initializable {
             List<Especialidade> especialidades = new ArrayList<>(especialidadesSet);
             ObservableList<Especialidade> data = FXCollections.observableArrayList(especialidades);
             comboEspecialidade.setItems(data);
+            comboEspecialidade.setOnAction(event -> {
+                especialidadeSelecionada = comboEspecialidade.getValue();
+            });
         } catch (Exception ex) {
             ex.printStackTrace();
         }
