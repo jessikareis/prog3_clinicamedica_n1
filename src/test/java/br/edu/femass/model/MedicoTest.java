@@ -3,64 +3,80 @@ package br.edu.femass.model;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashSet;
+import java.util.Set;
 
-public class MedicoTest {
+class MedicoTest {
+
+    private Set<Medico> medicos;
+
+    private Medico medico;
 
     @Test
-    public void testGetNome() {
-        Medico medico = new Medico("João", "9999999", new Especialidade("Pediatria"));
-        assertEquals("João", medico.getNome());
+    void setUp() {
+        medico = new Medico("Guilherme", "123456789");
+        medico.setId(1L);
+        medicos = new HashSet<>();
     }
 
     @Test
-    public void testSetNome() {
-        Medico medico = new Medico("João", "9999999", new Especialidade("Pediatria"));
-        medico.setNome("Maria");
-        assertEquals("Maria", medico.getNome());
+    void testGetId() {
+        assertEquals(1L, medico.getId());
     }
 
     @Test
-    public void testGetTelefoneM() {
-        Medico medico = new Medico("João", "9999999", new Especialidade("Pediatria"));
-        assertEquals("9999999", medico.getTelefoneM());
+    void testSetId() {
+        medico.setId(2L);
+        assertEquals(2L, medico.getId().longValue());
     }
 
     @Test
-    public void testSetTelefoneM() {
-        Medico medico = new Medico("João", "9999999", new Especialidade("Pediatria"));
-        medico.setTelefoneM("8888888");
-        assertEquals("8888888", medico.getTelefoneM());
+    void testGetNome() {
+        assertEquals("Guilherme", medico.getNome());
     }
 
     @Test
-    public void testGetAtivo() {
-        Medico medico = new Medico("João", "9999999", new Especialidade("Pediatria"));
+    void testSetNome() {
+        medico.setNome("Dr. Grey");
+        assertEquals("Dr. Grey", medico.getNome());
+    }
+
+    @Test
+    void testGetTelefoneM() {
+        assertEquals("123456789", medico.getTelefoneM());
+    }
+
+    @Test
+    void testSetTelefoneM() {
+        medico.setTelefoneM("987654321");
+        assertEquals("987654321", medico.getTelefoneM());
+    }
+
+    @Test
+    void testGetAtivo() {
         assertTrue(medico.getAtivo());
     }
 
     @Test
-    public void testSetAtivo() {
-        Medico medico = new Medico("João", "9999999", new Especialidade("Pediatria"));
+    void testSetAtivo() {
         medico.setAtivo(false);
         assertFalse(medico.getAtivo());
     }
 
     @Test
-    public void testGetEspecialidade() {
-        Especialidade esp = new Especialidade("Pediatria");
-        Medico medico = new Medico("João", "9999999", esp);
-        assertEquals(esp, medico.getEspecialidade());
+    void testToString() {
+        assertEquals("Guilherme", medico.toString());
     }
 
     @Test
-    public void testSetEspecialidade() {
-        Especialidade esp1 = new Especialidade("Pediatria");
-        Especialidade esp2 = new Especialidade("Cardiologia");
-        Medico medico = new Medico("João", "9999999", esp1);
-        medico.setEspecialidade(esp2);
-        assertEquals(esp2, medico.getEspecialidade());
+    void testAtualizarUltimoId() {
+        medicos.add(new Medico("Guilherme", "555555"));
+        medicos.add(new Medico("Auxiliadora", "666666"));
+        medicos.add(new Medico("Alexandre", "777777"));
+
+        Medico.atualizarUltimoId(medicos);
     }
 }

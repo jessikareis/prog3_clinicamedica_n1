@@ -23,7 +23,7 @@
                   <TableColumn fx:id="colPacienteAgenda" minWidth="0.0" prefWidth="141.0" text="Paciente" />
                   <TableColumn fx:id="colPlanoAgenda" minWidth="0.0" prefWidth="149.0" text="Plano" />
                   <TableColumn fx:id="colMedicoAgenda" minWidth="0.0" prefWidth="115.0" text="Medico" />
-                  <TableColumn fx:id="colEspecialidadeAgenda" minWidth="0.0" prefWidth="133.0" text="Especialidade" />
+                  <TableColumn fx:id="colEspAgenda" minWidth="0.0" prefWidth="133.0" text="Especialidade" />
               </columns>
             </TableView>
          </children>
@@ -60,9 +60,9 @@
             <Label prefHeight="42.0" prefWidth="78.0" text="Paciente" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <ComboBox fx:id="comboPaciente" prefHeight="25.0" prefWidth="169.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <Label prefHeight="42.0" prefWidth="78.0" text="Medico" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <ComboBox fx:id="comboMedico" prefHeight="25.0" prefWidth="167.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <ComboBox fx:id="comboMedico" onAction="#comboMedico_OnAction" prefHeight="25.0" prefWidth="167.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
             <Label prefHeight="42.0" prefWidth="78.0" text="Especialidade" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <ComboBox fx:id="comboEspecialidade" prefHeight="25.0" prefWidth="168.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <ComboBox fx:id="comboEsp" prefHeight="25.0" prefWidth="168.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
          </children>
       </GridPane>
    </left>

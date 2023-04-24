@@ -46,13 +46,13 @@
             <Button layoutX="312.0" layoutY="265.0" mnemonicParsing="false" onAction="#BtnExcluir_Click" prefHeight="49.0" prefWidth="127.0" text="Excluir" />
             <TableView fx:id="TableAtendimento" layoutX="3.0" layoutY="14.0" prefHeight="200.0" prefWidth="744.0">
               <columns>
-                  <TableColumn fx:id="IdAtendimentoE" prefWidth="37.0" text="ID" />
+                  <TableColumn fx:id="colIdAtendimentoE" prefWidth="37.0" text="ID" />
                 <TableColumn fx:id="colDataAtendimentoE" prefWidth="72.0" text="Data" />
                   <TableColumn fx:id="colHoraAtendimentoE" prefWidth="64.0" text="Hora" />
                   <TableColumn fx:id="colPacienteAtendimentoE" minWidth="0.0" prefWidth="145.0" text="Paciente" />
                   <TableColumn fx:id="colPlanoAtendimentoE" minWidth="0.0" prefWidth="141.0" text="Plano" />
                   <TableColumn fx:id="colMedicoAtendimentoE" minWidth="0.0" prefWidth="148.0" text="Medico" />
-                  <TableColumn fx:id="colEspecialidadeAtendimentoE" minWidth="0.0" prefWidth="136.0" text="Especialidade" />
+                  <TableColumn fx:id="colEspAtendimentoE" minWidth="0.0" prefWidth="136.0" text="Especialidade" />
               </columns>
             </TableView>
          </children>

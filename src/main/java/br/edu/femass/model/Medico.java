@@ -7,17 +7,13 @@ public class Medico {
     private String nome;
     private String telefoneM;
     private Boolean ativo;
-    private Especialidade especialidade;
-
     private static Long ultimoCodigo = 0L;
 
     public Medico() {
-
     }
 
-    public Medico(String nome, String telefoneM, Especialidade especialidade) {
+    public Medico(String nome, String telefoneM) {
         this.nome = nome;
-        this.especialidade = especialidade;
         this.telefoneM = telefoneM;
         this.ativo = true;
         this.id = ultimoCodigo + 1;
@@ -59,14 +55,6 @@ public class Medico {
     @Override
     public String toString() {
         return this.nome;
-    }
-
-    public Especialidade getEspecialidade() {
-        return especialidade;
-    }
-
-    public void setEspecialidade(Especialidade especialidade) {
-        this.especialidade = especialidade;
     }
 
     public static void atualizarUltimoId(Set<Medico> medicos) {

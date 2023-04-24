@@ -19,7 +19,7 @@ public class MainController implements Initializable {
 
     @FXML
     private void BtnEspecialidade_Click(ActionEvent event) {
-        preencherLista("Especialidade");
+        preencherLista("Esp");
     }
 
     @FXML
@@ -56,7 +56,8 @@ public class MainController implements Initializable {
             scene.getRoot().setStyle("-fx-font-family: 'serif'");
 
             Stage stage = new Stage();
-            stage.setTitle("Cadastro de " + path);
+            // stage.setTitle("Cadastro de " + path);
+            stage.setTitle(path);
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {

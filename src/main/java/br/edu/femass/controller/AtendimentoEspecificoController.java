@@ -51,14 +51,14 @@ public class AtendimentoEspecificoController implements Initializable {
     @FXML
     private TableColumn<Agenda, String> colMedicoAtendimentoE = new TableColumn<>();
     @FXML
-    private TableColumn<Agenda, String> colEspecialidadeAtendimentoE = new TableColumn<>();
+    private TableColumn<Agenda, String> colEspAtendimentoE = new TableColumn<>();
 
     private AgendaDao dao_agenda = new AgendaDao();
     // private Agenda agenda;
     private MedicoDao dao_medico = new MedicoDao();
     private Medico medico;
-    // private EspecialidadeDao dao_especialidade = new EspecialidadeDao();
-    // private Especialidade especialidade;
+    // private EspDao dao_esp = new EspDao();
+    // private Esp esp;
     // private PacienteDao dao_paciente = new PacienteDao();
     // private Paciente paciente;
     // private PlanoDao dao_plano = new PlanoDao();
@@ -158,8 +158,8 @@ public class AtendimentoEspecificoController implements Initializable {
                 new PropertyValueFactory<>("plano"));
         colMedicoAtendimentoE.setCellValueFactory(
                 new PropertyValueFactory<>("medico"));
-        colEspecialidadeAtendimentoE.setCellValueFactory(
-                new PropertyValueFactory<>("especialidade"));
+        colEspAtendimentoE.setCellValueFactory(
+                new PropertyValueFactory<>("esp"));
         carregarMedico();
         exibirAgenda();
     }

@@ -1,20 +1,26 @@
 package br.edu.femass.model;
 
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 import java.util.Set;
 
-public class Especialidade {
+public class Esp {
     private Long id;
     private String nome;
     private Boolean ativo;
+    public Medico med;
 
-    private static Long ultimoCodigo = 0L;
+    static Long ultimoCodigo = 0L;
 
-    public Especialidade() {
+    public Esp() {
 
     }
 
-    public Especialidade(String nome) {
+    public Esp(String nome, Medico med) {
         this.nome = nome;
+        this.med = med;
         this.ativo = true;
         this.id = ultimoCodigo + 1;
         ultimoCodigo++;
@@ -51,19 +57,27 @@ public class Especialidade {
         return this.nome;
     }
 
-    // public EspecialidadeDeSaude getEspecialidadeDeSaude() {
-    // return especialidadeDeSaude;
+    public Medico getMed() {
+        return med;
+    }
+
+    public void setMed(Medico med) {
+        this.med = med;
+    }
+
+    // public EspDeSaude getEspDeSaude() {
+    // return EspDeSaude;
     // }
 
-    // public void se tEspecialidadeDeSaude(EspecialidadeDeSaude
-    // especialidadeDeSaude) {
-    // this.especialidadeDeSaude = especialidadeDeSaude;
+    // public void se tEspDeSaude(EspDeSaude
+    // EspDeSaude) {
+    // this.EspDeSaude = EspDeSaude;
     // }
 
-    public static void atualizarUltimoId(Set<Especialidade> especialidades) {
-        for (Especialidade especialidade : especialidades) {
-            if (especialidade.getId().longValue() > ultimoCodigo) {
-                ultimoCodigo = especialidade.getId();
+    public static void atualizarUltimoId(Set<Esp> Esps) {
+        for (Esp Esp : Esps) {
+            if (Esp.getId().longValue() > ultimoCodigo) {
+                ultimoCodigo = Esp.getId();
             }
         }
     }

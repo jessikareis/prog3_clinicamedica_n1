@@ -12,13 +12,13 @@
 <?import javafx.scene.layout.HBox?>
 
 <BorderPane prefHeight="361.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.femass.controller.MainController">
-   <top>
+   <center>
       <GridPane maxHeight="522.0" prefHeight="427.0" prefWidth="509.0" BorderPane.alignment="CENTER">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.0" minWidth="10.0" prefWidth="57.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="155.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="103.0" minWidth="10.0" prefWidth="91.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="164.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="190.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="103.0" minWidth="10.0" prefWidth="41.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="190.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="103.0" minWidth="10.0" prefWidth="42.0" />
         </columnConstraints>
         <rowConstraints>
@@ -34,14 +34,13 @@
         </rowConstraints>
          <children>
             <Label GridPane.rowIndex="4" />
-            <Button fx:id="BtnAgenda" mnemonicParsing="false" onAction="#BtnAgenda_Click" prefHeight="94.0" prefWidth="172.0" text="Agendamento" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Button fx:id="BtnAgenda" mnemonicParsing="false" onAction="#BtnAgenda_Click" prefHeight="40.0" prefWidth="206.0" text="Agendamento" GridPane.columnIndex="3" GridPane.rowIndex="6" />
             <Button fx:id="BtnAtendimento2" mnemonicParsing="false" onAction="#BtnAtendimento2_Click" prefHeight="79.0" prefWidth="192.0" text="Atendimento Todos os Médicos" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
             <Button fx:id="BtnAtendimento1" mnemonicParsing="false" onAction="#BtnAtendimento1_Click" prefHeight="79.0" prefWidth="192.0" text="Atendimento Especifico" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button fx:id="BtnPaciente" mnemonicParsing="false" onAction="#BtnPaciente_Click" prefHeight="94.0" prefWidth="172.0" text="Cadastrar Paciente" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="BtnMedico" mnemonicParsing="false" onAction="#BtnMedico_Click" prefHeight="79.0" prefWidth="192.0" text="Cadastrar Médico" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button fx:id="BtnPlano" mnemonicParsing="false" onAction="#BtnPlano_Click" prefHeight="94.0" prefWidth="172.0" text="Cadastrar Plano" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <Button fx:id="BtnEspecialidade" mnemonicParsing="false" onAction="#BtnEspecialidade_Click" prefHeight="94.0" prefWidth="172.0" text="Cadastrar Especialidade" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Button fx:id="BtnPaciente" mnemonicParsing="false" onAction="#BtnPaciente_Click" prefHeight="40.0" prefWidth="191.0" text="Cadastrar Paciente" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="BtnMedico" mnemonicParsing="false" onAction="#BtnMedico_Click" prefHeight="79.0" prefWidth="192.0" text="Cadastrar Médico" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Button fx:id="BtnPlano" mnemonicParsing="false" onAction="#BtnPlano_Click" prefHeight="40.0" prefWidth="197.0" text="Cadastrar Plano" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
-   </top>
+   </center>
 </BorderPane>

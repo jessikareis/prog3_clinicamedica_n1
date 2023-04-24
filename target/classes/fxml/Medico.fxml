@@ -14,15 +14,15 @@
    <right>
       <Pane prefHeight="358.0" prefWidth="526.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="209.0" layoutY="269.0" mnemonicParsing="false" onAction="#BtnExcluir_Click" prefHeight="47.0" prefWidth="122.0" text="Excluir" />
+            <Button layoutX="356.0" layoutY="236.0" mnemonicParsing="false" onAction="#BtnExcluir_Click" prefHeight="47.0" prefWidth="122.0" text="Excluir" />
             <TableView fx:id="TableMedico" layoutX="5.0" layoutY="14.0" prefHeight="200.0" prefWidth="516.0">
               <columns>
                 <TableColumn fx:id="colIdMedico" prefWidth="48.0" text="ID" />
-                <TableColumn fx:id="colNomeMedico" prefWidth="189.0" text="Nome" />
-                  <TableColumn fx:id="colEspecialidadeMedico" prefWidth="146.0" text="Especialidade" />
-                  <TableColumn fx:id="colTelefoneMedico" prefWidth="130.0" text="Telefone" />
+                <TableColumn fx:id="colNomeMedico" prefWidth="308.0" text="Nome" />
+                  <TableColumn fx:id="colTelefoneMedico" prefWidth="155.0" text="Telefone" />
               </columns>
             </TableView>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="236.0" mnemonicParsing="false" onAction="#BtnEsp_Click" prefHeight="47.0" prefWidth="122.0" text="Adicionar Especialidade" textAlignment="CENTER" wrapText="true" />
          </children>
       </Pane>
    </right>
@@ -47,13 +47,11 @@
          <children>
             <Label prefHeight="17.0" prefWidth="74.0" text="Nome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="TxtNomeM" prefHeight="25.0" prefWidth="119.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-            <Label text="Especialidade" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label text="Telefone" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField fx:id="TxtTelefoneM" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
             <Label prefHeight="17.0" prefWidth="74.0" text="Id" GridPane.columnIndex="1" />
             <TextField fx:id="TxtIdM" disable="true" prefHeight="25.0" prefWidth="119.0" GridPane.columnIndex="2" />
             <Button mnemonicParsing="false" onAction="#BtnGravar_Click" prefHeight="39.0" prefWidth="106.0" text=" Gravar" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-            <ComboBox fx:id="comboEspecialidade" prefHeight="25.0" prefWidth="141.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </left>

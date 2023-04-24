@@ -1,7 +1,46 @@
 [ {
-  "id" : 3,
+  "id" : 1,
+  "hora" : "10:00",
+  "data" : "05/04/2023",
+  "paciente" : {
+    "id" : 1,
+    "nome" : "Jessika Reis",
+    "cpf" : "21542652475",
+    "telefone" : "985645785",
+    "ativo" : true,
+    "plano" : {
+      "id" : 1,
+      "nome" : "Unimed Costa do Sol",
+      "ativo" : true
+    }
+  },
+  "plano" : {
+    "id" : 5,
+    "nome" : "SulAmérica Saúde",
+    "ativo" : true
+  },
+  "medico" : {
+    "id" : 1,
+    "nome" : "Guilherme Reis",
+    "telefoneM" : "5555555555",
+    "ativo" : true
+  },
+  "esp" : {
+    "id" : 1,
+    "nome" : "Clinico geral",
+    "ativo" : true,
+    "med" : {
+      "id" : 1,
+      "nome" : "Guilherme Reis",
+      "telefoneM" : "5555555555",
+      "ativo" : true
+    }
+  },
+  "ativo" : true
+}, {
+  "id" : 2,
   "hora" : "11:00",
-  "data" : "12/04/2023",
+  "data" : "20/04/2023",
   "paciente" : {
     "id" : 2,
     "nome" : "Alexandre Mello",
@@ -15,139 +54,26 @@
     }
   },
   "plano" : {
-    "id" : 5,
-    "nome" : "SulAmérica Saúde",
-    "ativo" : true
-  },
-  "medico" : {
-    "id" : 1,
-    "nome" : "Guilherme Reis",
-    "telefoneM" : "20122542",
-    "ativo" : true,
-    "especialidade" : {
-      "id" : 1,
-      "nome" : "Cardiologista",
-      "ativo" : true
-    }
-  },
-  "especialidade" : {
-    "id" : 5,
-    "nome" : "Dermatologista",
-    "ativo" : true
-  },
-  "ativo" : true
-}, {
-  "id" : 4,
-  "hora" : "16:00",
-  "data" : "26/04/2023",
-  "paciente" : {
-    "id" : 1,
-    "nome" : "Jessika Reis",
-    "cpf" : "21542652475",
-    "telefone" : "985645785",
-    "ativo" : true,
-    "plano" : {
-      "id" : 1,
-      "nome" : "Unimed Costa do Sol",
-      "ativo" : true
-    }
-  },
-  "plano" : {
-    "id" : 2,
-    "nome" : "Bradesco",
+    "id" : 4,
+    "nome" : "Uniodonto",
     "ativo" : true
   },
   "medico" : {
     "id" : 2,
-    "nome" : "Maria Auxiliadora",
-    "telefoneM" : "985475632",
-    "ativo" : true,
-    "especialidade" : {
-      "id" : 5,
-      "nome" : "Dermatologista",
-      "ativo" : true
-    }
-  },
-  "especialidade" : {
-    "id" : 2,
-    "nome" : "Clinico Geral",
+    "nome" : "Maria Reis",
+    "telefoneM" : "2255525222",
     "ativo" : true
   },
-  "ativo" : true
-}, {
-  "id" : 2,
-  "hora" : "14:00",
-  "data" : "26/04/2023",
-  "paciente" : {
+  "esp" : {
     "id" : 3,
-    "nome" : "Valentina Barcelos",
-    "cpf" : "21542658758",
-    "telefone" : "2125452366",
-    "ativo" : true,
-    "plano" : {
-      "id" : 6,
-      "nome" : "NotreDame Intermédica",
-      "ativo" : true
-    }
-  },
-  "plano" : {
-    "id" : 6,
-    "nome" : "NotreDame Intermédica",
-    "ativo" : true
-  },
-  "medico" : {
-    "id" : 1,
-    "nome" : "Guilherme Reis",
-    "telefoneM" : "20122542",
-    "ativo" : true,
-    "especialidade" : {
-      "id" : 1,
-      "nome" : "Cardiologista",
-      "ativo" : true
-    }
-  },
-  "especialidade" : {
-    "id" : 1,
-    "nome" : "Cardiologista",
-    "ativo" : true
-  },
-  "ativo" : true
-}, {
-  "id" : 1,
-  "hora" : "10:25",
-  "data" : "18/04/2023",
-  "paciente" : {
-    "id" : 1,
-    "nome" : "Jessika Reis",
-    "cpf" : "21542652475",
-    "telefone" : "985645785",
-    "ativo" : true,
-    "plano" : {
-      "id" : 1,
-      "nome" : "Unimed Costa do Sol",
-      "ativo" : true
-    }
-  },
-  "plano" : {
-    "id" : 1,
-    "nome" : "Unimed Costa do Sol",
-    "ativo" : true
-  },
-  "medico" : {
-    "id" : 2,
-    "nome" : "Maria Auxiliadora",
-    "telefoneM" : "985475632",
-    "ativo" : true,
-    "especialidade" : {
-      "id" : 5,
-      "nome" : "Dermatologista",
-      "ativo" : true
-    }
-  },
-  "especialidade" : {
-    "id" : 5,
     "nome" : "Dermatologista",
-    "ativo" : true
+    "ativo" : true,
+    "med" : {
+      "id" : 2,
+      "nome" : "Maria Reis",
+      "telefoneM" : "2255525222",
+      "ativo" : true
+    }
   },
   "ativo" : true
 } ]

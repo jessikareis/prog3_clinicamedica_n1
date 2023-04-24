@@ -43,7 +43,7 @@
         @FXML
         private TableColumn<Agenda, String> colMedicoAtendTodosMedicos = new TableColumn<>();
         @FXML
-        private TableColumn<Agenda, String> colEspecialidadeAtendTodosMedicos = new TableColumn<>();
+        private TableColumn<Agenda, String> colEspAtendTodosMedicos = new TableColumn<>();
         
         private AgendaDao dao_agenda = new AgendaDao();
         private Medico medico;
@@ -121,8 +121,8 @@
                 new PropertyValueFactory<>("plano"));
             colMedicoAtendTodosMedicos.setCellValueFactory(
                 new PropertyValueFactory<>("medico"));
-            colEspecialidadeAtendTodosMedicos.setCellValueFactory(
-                new PropertyValueFactory<>("especialidade"));
+            colEspAtendTodosMedicos.setCellValueFactory(
+                new PropertyValueFactory<>("esp"));
             
             exibirAgenda();   
         }

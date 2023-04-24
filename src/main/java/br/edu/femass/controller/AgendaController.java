@@ -8,13 +8,13 @@ import java.util.ResourceBundle;
 import java.util.Set;
 
 import br.edu.femass.dao.AgendaDao;
-import br.edu.femass.dao.EspecialidadeDao;
+import br.edu.femass.dao.EspDao;
 import br.edu.femass.dao.MedicoDao;
 import br.edu.femass.dao.PacienteDao;
 import br.edu.femass.dao.PlanoDao;
 import br.edu.femass.model.Agenda;
 import br.edu.femass.model.Paciente;
-import br.edu.femass.model.Especialidade;
+import br.edu.femass.model.Esp;
 import br.edu.femass.model.Medico;
 import br.edu.femass.model.Plano;
 import br.edu.femass.utils.UtilsJavaFx;
@@ -40,7 +40,7 @@ public class AgendaController implements Initializable {
     @FXML
     private ComboBox<Medico> comboMedico;
     @FXML
-    private ComboBox<Especialidade> comboEspecialidade;
+    private ComboBox<Esp> comboEsp;
     @FXML
     private TextField TxtHora;
     @FXML
@@ -61,19 +61,19 @@ public class AgendaController implements Initializable {
     @FXML
     private TableColumn<Medico, String> colMedicoAgenda = new TableColumn<>();
     @FXML
-    private TableColumn<Especialidade, String> colEspecialidadeAgenda = new TableColumn<>();
+    private TableColumn<Esp, String> colEspAgenda = new TableColumn<>();
 
     private AgendaDao dao_agenda = new AgendaDao();
     private Agenda agenda;
     private MedicoDao dao_medico = new MedicoDao();
     private Medico medico;
-    private EspecialidadeDao dao_especialidade = new EspecialidadeDao();
-    private Especialidade especialidade;
+    private EspDao dao_esp = new EspDao();
+    private Esp esp;
     private PacienteDao dao_paciente = new PacienteDao();
     private Paciente paciente;
     private PlanoDao dao_plano = new PlanoDao();
     private Plano plano;
-    private Especialidade especialidadeSelecionada;
+    
 
     @FXML
     private void BtnGravar_Click(ActionEvent event) {
@@ -84,7 +84,7 @@ public class AgendaController implements Initializable {
                     comboPaciente.getValue(),
                     comboPlano.getValue(),
                     comboMedico.getValue(),
-                    especialidadeSelecionada);
+                    comboEsp.getValue());
             TxtId.setText(agenda.getId().toString());
             if (dao_agenda.gravar(agenda) == false) {
                 UtilsJavaFx.exibirMensagem("Não foi possível gravar o agenda");
@@ -114,21 +114,35 @@ public class AgendaController implements Initializable {
         }
 
     }
-
     @FXML
     private void comboMedico_OnAction(ActionEvent event) {
         Medico medico = comboMedico.getValue();
-        if (medico == null)
-            return;
         try {
-            Set<Especialidade> especialidadesSet = dao_especialidade.buscarAtivos();
-            List<Especialidade> especialidades = new ArrayList<>(especialidadesSet);
-            ObservableList<Especialidade> data = FXCollections.observableArrayList(especialidades);
-            comboEspecialidade.setItems(data);
+            Set<Esp> espsSet = dao_esp.buscarPorMedico(medico);
+            List<Esp> esps = new ArrayList<>(espsSet);
+            ObservableList<Esp> data = FXCollections.observableArrayList(esps);
+            comboEsp.setItems(data);        
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+
     }
+
+
+    // @FXML
+    // private void comboMedico_OnAction(ActionEvent event) {
+    //     Medico medico = comboMedico.getValue();
+    //     if (medico == null)
+    //         return;
+    //     try {
+    //         Set<Esp> espsSet = dao_esp.buscarAtivos();
+    //         List<Esp> esps = new ArrayList<>(espsSet);
+    //         ObservableList<Esp> data = FXCollections.observableArrayList(esps);
+    //         comboEsp.setItems(data);
+    //     } catch (Exception ex) {
+    //         ex.printStackTrace();    
+    //     }
+    // }
 
     private void exibirAgenda() {
         try {
@@ -161,18 +175,15 @@ public class AgendaController implements Initializable {
             ex.printStackTrace();
         }
 
-        // Especialidades
-        try {
-            Set<Especialidade> especialidadesSet = dao_especialidade.buscarAtivos();
-            List<Especialidade> especialidades = new ArrayList<>(especialidadesSet);
-            ObservableList<Especialidade> data = FXCollections.observableArrayList(especialidades);
-            comboEspecialidade.setItems(data);
-            comboEspecialidade.setOnAction(event -> {
-                especialidadeSelecionada = comboEspecialidade.getValue();
-            });
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+        // Esps
+        // try {
+        //     Set<Esp> espsSet = dao_esp.buscarAtivos();
+        //     List<Esp> esps = new ArrayList<>(espsSet);
+        //     ObservableList<Esp> data = FXCollections.observableArrayList(esps);
+        //     comboEsp.setItems(data);        
+        // } catch (Exception ex) {
+        //     ex.printStackTrace();
+        // }
 
         // Planos
         try {
@@ -199,8 +210,8 @@ public class AgendaController implements Initializable {
                 new PropertyValueFactory<>("plano"));
         colMedicoAgenda.setCellValueFactory(
                 new PropertyValueFactory<>("medico"));
-        colEspecialidadeAgenda.setCellValueFactory(
-                new PropertyValueFactory<>("especialidade"));
+        colEspAgenda.setCellValueFactory(
+                new PropertyValueFactory<>("esp"));
         carregarCombos();
         exibirAgenda();
     }

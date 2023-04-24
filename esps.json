@@ -1,0 +1,31 @@
+[ {
+  "id" : 1,
+  "nome" : "Clinico geral",
+  "ativo" : true,
+  "med" : {
+    "id" : 1,
+    "nome" : "Guilherme Reis",
+    "telefoneM" : "5555555555",
+    "ativo" : true
+  }
+}, {
+  "id" : 3,
+  "nome" : "Dermatologista",
+  "ativo" : true,
+  "med" : {
+    "id" : 2,
+    "nome" : "Maria Reis",
+    "telefoneM" : "2255525222",
+    "ativo" : true
+  }
+}, {
+  "id" : 2,
+  "nome" : "Odontologia",
+  "ativo" : true,
+  "med" : {
+    "id" : 1,
+    "nome" : "Guilherme Reis",
+    "telefoneM" : "5555555555",
+    "ativo" : true
+  }
+} ]

@@ -1,15 +1,4 @@
 [ {
-  "id" : 1,
-  "nome" : "Jessika Reis",
-  "cpf" : "21542652475",
-  "telefone" : "985645785",
-  "ativo" : true,
-  "plano" : {
-    "id" : 1,
-    "nome" : "Unimed Costa do Sol",
-    "ativo" : true
-  }
-}, {
   "id" : 2,
   "nome" : "Alexandre Mello",
   "cpf" : "55487569523",
@@ -21,6 +10,17 @@
     "ativo" : true
   }
 }, {
+  "id" : 4,
+  "nome" : "João Pedro",
+  "cpf" : "22555252525",
+  "telefone" : "2525252",
+  "ativo" : true,
+  "plano" : {
+    "id" : 5,
+    "nome" : "SulAmérica Saúde",
+    "ativo" : true
+  }
+}, {
   "id" : 3,
   "nome" : "Valentina Barcelos",
   "cpf" : "21542658758",
@@ -29,6 +29,17 @@
   "plano" : {
     "id" : 6,
     "nome" : "NotreDame Intermédica",
+    "ativo" : true
+  }
+}, {
+  "id" : 1,
+  "nome" : "Jessika Reis",
+  "cpf" : "21542652475",
+  "telefone" : "985645785",
+  "ativo" : true,
+  "plano" : {
+    "id" : 1,
+    "nome" : "Unimed Costa do Sol",
     "ativo" : true
   }
 } ]

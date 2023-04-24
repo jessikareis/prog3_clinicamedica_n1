@@ -9,7 +9,7 @@ public class Agenda {
     private Paciente paciente;
     private Plano plano;
     private Medico medico;
-    private Especialidade especialidade;
+    private Esp esp;
     private Boolean ativo;
 
     private static Long ultimoCodigo = 0L;
@@ -18,14 +18,13 @@ public class Agenda {
 
     }
 
-    public Agenda(String hora, String data, Paciente paciente, Plano plano, Medico medico,
-            Especialidade especialidade) {
+    public Agenda(String hora, String data, Paciente paciente, Plano plano, Medico medico,Esp esp) {
         this.hora = hora;
         this.data = data;
         this.paciente = paciente;
         this.plano = plano;
         this.medico = medico;
-        this.especialidade = especialidade;
+        this.esp = esp;
         this.ativo = true;
         this.id = ultimoCodigo + 1;
         ultimoCodigo++;
@@ -81,12 +80,12 @@ public class Agenda {
         this.medico = medico;
     }
 
-    public Especialidade getEspecialidade() {
-        return especialidade;
+    public Esp getEsp() {
+        return esp;
     }
 
-    public void setEspecialidade(Especialidade especialidade) {
-        this.especialidade = especialidade;
+    public void setEsp(Esp esp) {
+        this.esp = esp;
     }
 
     public Boolean getAtivo() {

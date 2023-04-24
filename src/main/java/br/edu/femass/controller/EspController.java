@@ -1,6 +1,5 @@
-    package br.edu.femass.controller;
+package br.edu.femass.controller;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,93 +15,72 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
 
-public class MedicoController implements Initializable {
+public class EspController implements Initializable {
+    @FXML
+    private TextField TxtNomeEsp;
+    @FXML
+    private TextField TxtId;
+    @FXML
+    private ComboBox<Medico> comboMedico;
+    @FXML
+    private TableView<Esp> TableEsp = new TableView<Esp>();
+    @FXML
+    private TableColumn<Esp, Long> colIdEsp = new TableColumn<>();
+    @FXML
+    private TableColumn<Esp, Medico> colMedicoEsp = new TableColumn<>();
+    @FXML
+    private TableColumn<Esp, String> colNomeEsp = new TableColumn<>();
     
-    @FXML
-    private TextField TxtIdM;
-    @FXML
-    private TextField TxtNomeM;
-    @FXML
-    private TextField TxtTelefoneM;
-    @FXML
-    private TableView<Medico> TableMedico = new TableView<Medico>();
-    @FXML
-    private TableColumn<Medico, Long> colIdMedico = new TableColumn<>();
-    @FXML
-    private TableColumn<Medico, String> colNomeMedico = new TableColumn<>();
-    @FXML
-    private TableColumn<Medico, String> colTelefoneMedico = new TableColumn<>();
-    
+
 
     private MedicoDao dao_medico = new MedicoDao();
     private Medico medico;
-    private EspDao dao_esp = new EspDao();
+
     private Esp esp;
+    private EspDao dao_esp = new EspDao();
 
-    @FXML
-    private void BtnEsp_Click(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/Esp.fxml"));
-        
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add("/styles/Styles.css");
-        scene.getRoot().setStyle("-fx-font-family: 'serif'");
-
-        Stage stage = new Stage();
-        stage.setTitle("Adicionar uma especialiadade a um medico");
-        stage.setScene(scene);
-        stage.show();
-    }
 
     @FXML
     private void BtnGravar_Click(ActionEvent event) {
         try {
-            Esp e = new Esp();
-            medico = new Medico(
-                    TxtNomeM.getText(),
-                    TxtTelefoneM.getText());
-
-            TxtIdM.setText(medico.getId().toString());
-            if (dao_medico.gravar(medico) == false) {
+            Medico med = new Medico();
+            med = comboMedico.getValue();
+            esp = new Esp(TxtNomeEsp.getText(),med);
+            TxtId.setText(esp.getId().toString());
+            if (dao_esp.gravar(esp) == false) {
                 UtilsJavaFx.exibirMensagem("Não foi possível gravar o medico");
                 return;
             }
-            TxtIdM.setText("");
-            TxtNomeM.setText("");
-            TxtTelefoneM.setText("");
-
-            exibirMedico();
-
+            TxtId.setText("");
+            TxtNomeEsp.setText("");
+            exibirEsp();
         } catch (Exception e) {
             UtilsJavaFx.exibirMensagem(e.getMessage());
         }
     }
-
     @FXML
     private void BtnExcluir_Click(ActionEvent event) {
-        Medico medico = TableMedico.getSelectionModel().getSelectedItem();
-        if (medico == null)
+        Esp esp = TableEsp.getSelectionModel().getSelectedItem();
+        if (esp == null)
             return;
         try {
-            if (dao_medico.excluir(medico) == false) {
+            if (dao_esp.excluir(esp) == false) {
                 UtilsJavaFx.exibirMensagem("Não foi possível excluir o medico selecionado");
             }
-            exibirMedico();
+            exibirEsp();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
+
+    
     /*
      * botaoRemover.addActionListener(new ActionListener() {
      * 
@@ -123,27 +101,38 @@ public class MedicoController implements Initializable {
      * 
      */
 
-    private void exibirMedico() {
+    
+
+    private void carregarMedicos() {
         try {
-            ObservableList<Medico> data = FXCollections.observableArrayList(
-                    dao_medico.buscarAtivos());
-            TableMedico.setItems(data);
+            Set<Medico> medicosSet = dao_medico.buscarAtivos();
+            List<Medico> medicos = new ArrayList<>(medicosSet);
+            ObservableList<Medico> data = FXCollections.observableArrayList(medicos);   
+            comboMedico.setItems(data); 
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+    private void exibirEsp() {
+        try {
+            ObservableList<Esp> data = FXCollections.observableArrayList(
+                    dao_esp.buscarAtivos());
+            TableEsp.setItems(data);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
 
-   
-
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        colIdMedico.setCellValueFactory(
-                new PropertyValueFactory<>("id"));
-        colNomeMedico.setCellValueFactory(
-                new PropertyValueFactory<>("nome"));
-        colTelefoneMedico.setCellValueFactory(
-                new PropertyValueFactory<>("telefoneM"));
-        exibirMedico();
+            colIdEsp.setCellValueFactory(
+                    new PropertyValueFactory<>("id"));
+            colMedicoEsp.setCellValueFactory(
+                    new PropertyValueFactory<>("med"));
+            colNomeEsp.setCellValueFactory(
+                    new PropertyValueFactory<>("nome"));
+    exibirEsp();
+    carregarMedicos();        
     }
 }
 // @FXML
@@ -161,7 +150,7 @@ public class MedicoController implements Initializable {
 // if (medico==null) return;
 
 // TxtCPFP.setText(medico.getCPF());
-// TxtEspP.setText(medico.getEspDeSaude());
+// TxtEspecialidadeP.setText(medico.getEspecialidadeDeSaude());
 // TxtEnderecoP.setText(medico.getEndereco());
 // TxtId.setText(medico.getId().toString());
 // TxtNomeP.setText(medico.getNome());

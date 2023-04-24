@@ -23,7 +23,7 @@
                   <TableColumn fx:id="colPacienteAtendTodosMedicos" minWidth="0.0" prefWidth="154.0" text="Paciente" />
                   <TableColumn fx:id="colPlanoAtendTodosMedicos" minWidth="0.0" prefWidth="130.0" text="Plano" />
                   <TableColumn fx:id="colMedicoAtendTodosMedicos" minWidth="0.0" prefWidth="114.0" text="Medico" />
-                  <TableColumn fx:id="colEspecialidadeAtendTodosMedicos" minWidth="0.0" prefWidth="125.0" text="Especialidade" />
+                  <TableColumn fx:id="colEspAtendTodosMedicos" minWidth="0.0" prefWidth="125.0" text="Especialidade" />
               </columns>
             </TableView>
          </children>
